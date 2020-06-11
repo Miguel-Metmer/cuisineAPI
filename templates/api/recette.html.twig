@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="container is-fluid">
+        <h1 class="is-size-1 has-text-centered">{{recette.titre}} </h1>
+
+        {% if recette.sousTitre %}
+            <h1 class="is-size-4 has-text-centered">{{recette.sousTitre}}</h1>
+        {% endif %}
+        
+
+        <h1 class="is-size-5 has-text-centered mt-3">Ingrédients</h1>
+        {% set foo = recette.ingredients|split(',')%}
+        <ol type="1" class="has-text-centered mt-3" style="list-style-position:inside">
+            {% for item in foo %}
+                <li> {{item}} </li>
+            {% endfor %}
+        </ol>
+        <h2 class="is-size-6 has-text-centered mt-6"><a href="{{path("edit", {"id": recette.id}) }}">Editer</a> | <a href="{{path("delete", {"id" : recette.id}) }}">Supprimer</a></h2>
+
+    </div>
+
+{% endblock %}

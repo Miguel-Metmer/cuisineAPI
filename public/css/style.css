@@ -1,0 +1,36 @@
+
+@font-face 
+{
+    font-family: "adr";
+    src: url("/fonts/adr.ttf");
+}
+
+body
+{
+    font-family: "adr";
+}
+
+.menu-item-style
+{
+    list-style-type: none;
+}
+
+.menu-item-link
+{
+    text-decoration: none;
+}
+
+.menu-item-color
+{
+    color: black;
+}
+
+.menu-item-hover-color:hover
+{
+    background-color: aqua;
+}
+
+.menu-aside-background-color
+{
+    background-color: hsl(0, 0%, 96%);
+}

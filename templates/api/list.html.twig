@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+    <div class="columns container is-fluid is-multiline">
+        {% for item in recettes %}
+        <div class="column  has-background-danger" style="margin:5px; text-align:center"> 
+                <a href=" {{ path("recette", {"id": item.id}) }}" class="has-text-success-light"> {{ item.titre }} </a>
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
